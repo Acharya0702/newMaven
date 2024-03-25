@@ -1,4 +1,3 @@
-
 pipeline{
     tools{
         jdk 'myjava'
@@ -54,7 +53,5 @@ pipeline{
                   bat 'mvn package'
               }
           }
-	     
-          
       }
 }
