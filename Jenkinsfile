@@ -9,7 +9,7 @@ pipeline{
 	    
                steps{
 		 echo 'cloning..'
-                 git 'https://github.com/Acharya0702/newMaven.git'
+                 git 'https://github.com/Acharya0702/.git'
               }
           }
           stage('Compile'){
@@ -39,13 +39,13 @@ pipeline{
                }
            }	
           }
-           stage('MetricCheck'){
+          //  stage('MetricCheck'){
               
-              steps{
-                  bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
-              }
+          //     steps{
+          //         bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+          //     }
               
-          }
+          // }
           stage('Package'){
 		  
               steps{
