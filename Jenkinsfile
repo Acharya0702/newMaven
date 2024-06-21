@@ -46,12 +46,6 @@ pipeline{
           //     }
               
           // }
-
-	      stage('Publish test results') {
-      steps {
-          junit '**/test-results/test/*.xml'
-      }
-  } 
           stage('Package'){
 		  
               steps{
