@@ -39,13 +39,19 @@ pipeline{
                }
            }	
           }
-           stage('MetricCheck'){
+          //  stage('MetricCheck'){
               
-              steps{
-                  bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
-              }
+          //     steps{
+          //         bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+          //     }
               
-          }
+          // }
+
+	      stage('Publish test results') {
+      steps {
+          junit '**/test-results/test/*.xml'
+      }
+  } 
           stage('Package'){
 		  
               steps{
